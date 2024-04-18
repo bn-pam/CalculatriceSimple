@@ -1,4 +1,4 @@
-print("Bienvenue dans la calculatrice simple. Quelle opération souhaitez-vous faire ? ") #message de bienvenue et guide 
+print("Bienvenue dans la calculatrice simple. ! ") #message de bienvenue et guide 
 
 # imports des fichiers de fonction
 
@@ -7,31 +7,39 @@ from soustraction import soustraction
 from addition import addition
 from multiplication import multiplication
 
-# affichage de la fonctionnalité à l'écran et initialisation du résultat vide
-operation = input("un nom d'opération suivi de 2 nombres entre parenthèses séparés par une virgule : ")
-x=0
+choix = ""
+while choix != "q":
+    print("A pour addition, S pour soustraction, M pour mulitplication, D pour division")
+    print("q pour sortir")
+    choix = input("indiquer votre choix : ")
+    if choix == "A" or choix == "a" :
+        nombre1 = int(input("donner le premier nombre : "))
+        nombre2 = int(input("donner un autre nombre : "))
+        result = addition(nombre1, nombre2)
+        print(f"le résultat est {result}")
+        print("")
+        
+    elif choix == "S" or choix == "s" :
+        nombre1 = int(input("donner le premier nombre : "))
+        nombre2 = int(input("donner un autre nombre : "))
+        result = soustraction(nombre1, nombre2)
+        print(f"le résultat est {result}")
+        print("")
 
-# définition de la fonction générale de la calculatrice : appel des 4 opérations différentes
-def operation(chiffre_1, chiffre_2):
-    if operation is division :
-        division(chiffre_1, chiffre_2)
-
-    elif operation is soustraction :
-        soustraction(chiffre_1, chiffre_2)
-
-    elif operation is addition :
-        addition(chiffre_1, chiffre_2)
-
-    elif operation is multiplication :
-        multiplication(chiffre_1, chiffre_2)
-
-    return x
-
-
-
-# if input is not str():
-#     print("il faudrait rentrer un nom d'opération suivi de 2 nombres entre parenthèses séparés par une virgule
-#           "/soit soustraction(chiffre_1, chiffre_2), 
-#           "/soit addition(chiffre_1, chiffre_2), 
-#           "/soit multiplication(chiffre_1, chiffre_2)
-#           "/s'il vous plaît")
+    elif choix == "M" or choix == "m" :
+        nombre1 = int(input("donner le premier nombre : "))
+        nombre2 = int(input("donner un autre nombre : "))
+        result = multiplication(nombre1, nombre2)
+        print(f"le résultat est {result}")
+        print("")
+        
+     elif choix == "D" or choix == "d" :
+        nombre1 = int(input("donner le premier nombre : "))
+        nombre2 = int(input("donner un autre nombre : "))
+        result = division(nombre1, nombre2)
+        print(f"le résultat est {result}")
+        print("")
+        
+     else :
+        print("le choix n'est pas correct")
+        print("")
