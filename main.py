@@ -1,29 +1,41 @@
-# main.py
 from addition import addition
 from soustraction import soustraction
 from multiplication import multiplication
 from division import division
 
-while True:
-    print("Menu:")
-    print("1. Addition")
-    print("2. Soustraction")
-    print("3. Multiplication")
-    print("4. Division")
-    choice = input("Entrez votre choix (1/2/3/4) : ")
+choix = ""
+while choix != "q":
+    print("A pour addition, S pour soustraction, M pour mulitplication, D pour division")
+    print("q pour sortir")
+    choix = input("indiquer votre choix : ")
+    if choix == "A" or choix == "a" :
+        nombre1 = int(input("donner le premier nombre : "))
+        nombre2 = int(input("donner un autre nombre : "))
+        result = addition(nombre1, nombre2)
+        print(f"le résultat est {result}")
+        print("")
+        
+    elif choix == "S" or choix == "s" :
+        nombre1 = int(input("donner le premier nombre : "))
+        nombre2 = int(input("donner un autre nombre : "))
+        result = soustraction(nombre1, nombre2)
+        print(f"le résultat est {result}")
+        print("")
 
-    if choice == '1':
-        a = int(input("Entrez le premier nombre : "))
-        b = int(input("Entrez le deuxième nombre : "))
-        print("Résultat de l'addition :", addition(a, b))
-    elif choice == '2':
-        # Appel pour la soustraction
-        pass
-    elif choice == '3':
-        # Appel pour la multiplication
-        pass
-    elif choice == '4':
-        # Appel pour la division
-        pass
-    else:
-        print("Choix invalide. Veuillez choisir 1, 2, 3 ou 4.")
+    elif choix == "M" or choix == "m" :
+        nombre1 = int(input("donner le premier nombre : "))
+        nombre2 = int(input("donner un autre nombre : "))
+        result = multiplication(nombre1, nombre2)
+        print(f"le résultat est {result}")
+        print("")
+        
+     elif choix == "D" or choix == "d" :
+        nombre1 = int(input("donner le premier nombre : "))
+        nombre2 = int(input("donner un autre nombre : "))
+        result = division(nombre1, nombre2)
+        print(f"le résultat est {result}")
+        print("")
+        
+     else :
+        print("le choix n'est pas correct")
+        print("")
