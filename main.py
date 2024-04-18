@@ -6,6 +6,8 @@ from division import division
 from soustraction import soustraction
 from addition import addition
 from multiplication import multiplication
+from squarred import squarred
+from math import sqrt
 
 # affichage de la fonctionnalité à l'écran et initialisation du résultat vide
 operation = input("un nom d'opération suivi de 2 nombres entre parenthèses séparés par une virgule : ")
@@ -24,6 +26,9 @@ def operation(chiffre_1, chiffre_2):
 
     elif operation is multiplication :
         multiplication(chiffre_1, chiffre_2)
+    
+    elif operation is squarred :
+        squarred(chiffre_1, chiffre_2)
 
     return x
 
