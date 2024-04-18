@@ -1,17 +1,29 @@
-# Dans le fichier main.py sur la branche main
+# main.py
 from addition import addition
-
+from soustraction import soustraction
+from multiplication import multiplication
+from division import division
 
 while True:
     print("Menu:")
-    print("1. Opération membre 1")
-    print("2. Opération membre 2")
-    print("3. Opération membre 3")
-    choice = input("Entrez votre choix (1/2/3) : ")
+    print("1. Addition")
+    print("2. Soustraction")
+    print("3. Multiplication")
+    print("4. Division")
+    choice = input("Entrez votre choix (1/2/3/4) : ")
 
     if choice == '1':
-        # Appel de la fonction pour l'opération du membre 1
-        print(addition(10, 5))
- 
+        a = int(input("Entrez le premier nombre : "))
+        b = int(input("Entrez le deuxième nombre : "))
+        print("Résultat de l'addition :", addition(a, b))
+    elif choice == '2':
+        # Appel pour la soustraction
+        pass
+    elif choice == '3':
+        # Appel pour la multiplication
+        pass
+    elif choice == '4':
+        # Appel pour la division
+        pass
     else:
-        print("Choix invalide. Veuillez choisir 1, 2 ou 3.")
+        print("Choix invalide. Veuillez choisir 1, 2, 3 ou 4.")
