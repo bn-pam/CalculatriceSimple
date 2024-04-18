@@ -1,11 +1,7 @@
-print("Bienvenue dans la calculatrice simple. ! ") #message de bienvenue et guide 
-
-# imports des fichiers de fonction
-
-from division import division
-from soustraction import soustraction
 from addition import addition
+from soustraction import soustraction
 from multiplication import multiplication
+from division import division
 
 choix = ""
 while choix != "q":
